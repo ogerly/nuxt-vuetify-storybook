@@ -73,3 +73,77 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+
+
+## install prozess
+
+pnpm dlx nuxi@latest init <project-name>
+# Make sure you have `shamefully-hoist=true` in `.npmrc` before running pnpm install
+cd <project-name>
+pnpm install
+
+pnpm i -D vuetify vite-plugin-vuetify
+pnpm i @mdi/font
+
+
+ <!-- nuxt.config.ts -->
+
+ ```
+import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
+export default defineNuxtConfig({
+  devtools: { enabled: true },
+  build: {
+    transpile: ['vuetify'],
+  },
+  modules: [
+    (_options, nuxt) => {
+      nuxt.hooks.hook('vite:extendConfig', (config) => {
+        // @ts-expect-error
+        config.plugins.push(vuetify({ autoImport: true }))
+      })
+    },
+    //...
+  ],
+  vite: {
+    vue: {
+      template: {
+        transformAssetUrls,
+      },
+    },
+  },
+})
+
+ ```
+
+
+ <!-- ~/plugins/vuetify.ts -->
+ ```
+import '@mdi/font/css/materialdesignicons.css'
+import 'vuetify/styles'
+import { createVuetify } from 'vuetify'
+
+interface App {
+  vueApp: any; // Replace 'any' with the appropriate type for 'vueApp'
+}
+
+export default defineNuxtPlugin((app: App) => {
+  const vuetify = createVuetify({
+    // ... your configuration
+  })
+  app.vueApp.use(vuetify)
+})
+ ```
+
+<!-- app.vue -->
+ ```
+<template>
+  <NuxtLayout>
+    <v-app>
+      <NuxtPage />
+    </v-app>
+  </NuxtLayout>
+</template> 
+```
+
+pnpm run dev
