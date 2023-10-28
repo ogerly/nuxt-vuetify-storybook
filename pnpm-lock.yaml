@@ -46,6 +46,9 @@ devDependencies:
   storybook:
     specifier: ^7.5.1
     version: 7.5.1
+  vite:
+    specifier: ^4.5.0
+    version: 4.5.0
   vite-plugin-vuetify:
     specifier: ^1.0.2
     version: 1.0.2(vite@4.5.0)(vue@3.3.7)(vuetify@3.3.23)
@@ -4112,7 +4115,7 @@ packages:
       ts-dedent: 2.2.0
       type-fest: 2.19.0
       vue: 3.3.7
-      vue-component-type-helpers: 1.8.21
+      vue-component-type-helpers: 1.8.22
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -11280,8 +11283,8 @@ packages:
       ufo: 1.3.1
     dev: true
 
-  /vue-component-type-helpers@1.8.21:
-    resolution: {integrity: sha512-XL37QbmiqqbKrAFHPxqryMXpNgO0KMKd5bIo7LO9QABPMNEysd8xmYRIjwZhh0t2abveXjAJ//ZcAzwdxp/S3Q==}
+  /vue-component-type-helpers@1.8.22:
+    resolution: {integrity: sha512-LK3wJHs3vJxHG292C8cnsRusgyC5SEZDCzDCD01mdE/AoREFMl2tzLRuzwyuEsOIz13tqgBcnvysN3Lxsa14Fw==}
     dev: true
 
   /vue-devtools-stub@0.1.0:
