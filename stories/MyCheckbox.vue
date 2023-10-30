@@ -1,6 +1,6 @@
 <template>
     <v-app>
-    <v-checkbox v-model="model" :label="label"></v-checkbox>
+    <v-checkbox v-model="model" :label="label" append-icon="mdi-magnify"></v-checkbox>
 </v-app>
 </template>
 <script setup>
