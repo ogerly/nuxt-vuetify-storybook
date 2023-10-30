@@ -1,7 +1,20 @@
-import { defineNuxtConfig } from 'nuxt/config'
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: [
-    'vuetify-nuxt-module'
-  ]
+  modules: [ '@invictus.codes/nuxt-vuetify', 'nuxt-mdi', '@nuxtjs/storybook'],
+  vuetify: {
+    vuetifyOptions: {
+    },
+    moduleOptions: {
+      treeshaking: false,
+      useIconCDN: true,
+      styles: 'none',
+      autoImport: false,
+      useVuetifyLabs: true, 
+    }
+  },
+  storybook: {
+    url: 'http://localhost:6006',
+    storybookRoute: '/__storybook__',
+    port: 6006,
+  },
 })

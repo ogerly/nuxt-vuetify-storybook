@@ -147,3 +147,11 @@ export default defineNuxtPlugin((app: App) => {
 ```
 
 pnpm run dev
+
+
+
+Storybook "@nuxtjs/storybook" !! 
+
+https://storybook.nuxtjs.org/
+
+https://medium.com/@chakas3/unleash-your-creativity-with-the-new-storybook-nuxt-module-b7beb1441bed
