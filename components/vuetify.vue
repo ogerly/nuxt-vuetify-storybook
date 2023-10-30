@@ -36,3 +36,7 @@
     </v-row>
     </v-container>
    </template>
+   <script setup>
+
+</script>
+   
