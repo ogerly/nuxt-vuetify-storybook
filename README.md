@@ -155,3 +155,20 @@ Storybook "@nuxtjs/storybook" !!
 https://storybook.nuxtjs.org/
 
 https://medium.com/@chakas3/unleash-your-creativity-with-the-new-storybook-nuxt-module-b7beb1441bed
+
+
+
+
+# Vuetify in Storybook 
+
+- Install Vuetify and Nuxt Vuetify Plugin: To add Vuetify to your Nuxt.js project, run the following command:
+
+pnpm add @invictus.codes/nuxt-vuetify vuetify
+Familiarity with Vuetify: A basic understanding of Vuetify, a popular Vue framework for building UIs. This includes knowing how to use Vuetify components and work with its theming system.
+
+### make sure before starting that you have right versions
+vuetify:3.3.17 , nuxt:3.6.5, storybook:7.4.4
+
+
+Tutorial: Integrating Storybook with Vuetify in Your Nuxt Application
+https://medium.com/@chakas3/tutorial-integrating-storybook-with-vuetify-in-your-nuxt-application-ac8af5a0a946 

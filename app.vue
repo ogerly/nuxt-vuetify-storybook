@@ -2,8 +2,8 @@
   <NuxtLayout>
     <v-app>
       <v-container>
-        <v-text-field v-model="model" append-icon="mdi-magnify"></v-text-field>
-        <v-checkbox append-icon="mdi-check" v-model="model"></v-checkbox>
+        <v-text-field v-model="model" append-icon="mdi-magnify" />
+        <v-checkbox v-model="model" append-icon="mdi-check" />
       </v-container>
       <NuxtWelcome />
     </v-app>
@@ -11,4 +11,4 @@
 </template>
 <script setup>
 const model = ref('')
-</script> 
+</script>
