@@ -4,6 +4,9 @@
 
 The interplay of Nuxtjs, Vuetify, and Storybook now works quite well. However, it's not entirely straightforward, and the documentation on Nuxtjs is not always up to date. It took some time to achieve a clean integration, but with the modules provided by Nuxtjs, it is now possible to use Vuetify and Storybook together in a single project. 
 
+
+Demo: https://stackblitz.com/~/github.com/ogerly/nuxt-vuetify-storybook
+
 To get started:
 
 ## Setup
@@ -65,6 +68,8 @@ yarn preview
 ```
 
 For more information on deployment, please refer to the [Nuxt deployment documentation](https://nuxt.com/docs/getting-started/deployment).
+
+
 
 # Reconstructing the Starter:
 
