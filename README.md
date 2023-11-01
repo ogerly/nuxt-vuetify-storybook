@@ -1,174 +1,153 @@
-# Nuxt 3 Minimal Starter
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+
+# Nuxt 3 Minimal Starter with Storybook and Vuetify
+
+The interplay of Nuxtjs, Vuetify, and Storybook now works quite well. However, it's not entirely straightforward, and the documentation on Nuxtjs is not always up to date. It took some time to achieve a clean integration, but with the modules provided by Nuxtjs, it is now possible to use Vuetify and Storybook together in a single project. 
+
+To get started:
 
 ## Setup
 
-Make sure to install the dependencies:
+Make sure to install the required dependencies by running one of the following commands:
 
 ```bash
-# npm
+# Using npm
 npm install
 
-# pnpm
+# Using pnpm
 pnpm install
 
-# yarn
+# Using yarn
 yarn install
-
-# bun
-bun install
 ```
 
 ## Development Server
 
-Start the development server on `http://localhost:3000`:
+Start the development server on `http://localhost:3000` with one of the following commands:
 
 ```bash
-# npm
+# Using npm
 npm run dev
 
-# pnpm
+# Using pnpm
 pnpm run dev
 
-# yarn
+# Using yarn
 yarn dev
-
-# bun
-bun run dev
 ```
 
 ## Production
 
-Build the application for production:
+Build the application for production with the following commands:
 
 ```bash
-# npm
+# Using npm
 npm run build
 
-# pnpm
+# Using pnpm
 pnpm run build
 
-# yarn
+# Using yarn
 yarn build
-
-# bun
-bun run build
 ```
 
-Locally preview production build:
+To preview the production build locally:
 
 ```bash
-# npm
+# Using npm
 npm run preview
 
-# pnpm
+# Using pnpm
 pnpm run preview
 
-# yarn
+# Using yarn
 yarn preview
-
-# bun
-bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+For more information on deployment, please refer to the [Nuxt deployment documentation](https://nuxt.com/docs/getting-started/deployment).
 
+# Reconstructing the Starter:
 
+We have built the starter as follows.
 
-## install prozess
+### The most crucial point is to use precise versions at the moment.
+- Nuxt: 3.6.5
+- Vuetify: 3.3.17
+- Storybook: 7.4.4
 
-pnpm dlx nuxi@latest init <project-name>
-# Make sure you have `shamefully-hoist=true` in `.npmrc` before running pnpm install
-cd <project-name>
-pnpm install
+## Installation Process
 
-pnpm i -D vuetify vite-plugin-vuetify
-pnpm i @mdi/font
+1. Create a new Nuxt 3 project using the following command:
 
+  ```bash
+   pnpm dlx nuxt@3.6.5 init <project-name>
+   # Make sure you have 'shamefully-hoist=true' in your .npmrc before running pnpm install
+   cd <project-name>
+   pnpm install
+  ```
 
- <!-- nuxt.config.ts -->
+2. Install Storybook and Vuetify:
 
- ```
-import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
-export default defineNuxtConfig({
-  devtools: { enabled: true },
-  build: {
-    transpile: ['vuetify'],
-  },
-  modules: [
-    (_options, nuxt) => {
-      nuxt.hooks.hook('vite:extendConfig', (config) => {
-        // @ts-expect-error
-        config.plugins.push(vuetify({ autoImport: true }))
-      })
-    },
-    //...
-  ],
-  vite: {
-    vue: {
-      template: {
-        transformAssetUrls,
+  ```bash
+    npx storybook-nuxt init
+    pnpm add @invictus.codes/nuxt-vuetify vuetify 
+  ```
+
+3. Update your `nuxt.config.ts` with the following configuration:
+
+  ```typescript
+    export default defineNuxtConfig({
+      devtools: { enabled: true },
+      modules: ['@invictus.codes/nuxt-vuetify', '@nuxtjs/storybook', '@nuxtjs/eslint-module'],
+      vuetify: {
+        vuetifyOptions: {
+        },
+        moduleOptions: {
+          treeshaking: false,
+          useIconCDN: true,
+          styles: 'none',
+          autoImport: false,
+          useVuetifyLabs: true
+        }
       },
-    },
-  },
-})
+      storybook: {
+        url: 'http://localhost:6006',
+        storybookRoute: '/__storybook__',
+        port: 6006
+      }
+    })
+  ```
 
- ```
+4. Start the development server with Vuetify:
 
+  ```bash
+    pnpm run dev
+  ```
 
- <!-- ~/plugins/vuetify.ts -->
- ```
-import '@mdi/font/css/materialdesignicons.css'
-import 'vuetify/styles'
-import { createVuetify } from 'vuetify'
+## Storybook Integration
 
-interface App {
-  vueApp: any; // Replace 'any' with the appropriate type for 'vueApp'
-}
+To integrate Storybook with Nuxt 3, please refer to the [Storybook Nuxt module documentation](https://storybook.nuxtjs.org/).
 
-export default defineNuxtPlugin((app: App) => {
-  const vuetify = createVuetify({
-    // ... your configuration
-  })
-  app.vueApp.use(vuetify)
-})
- ```
-
-<!-- app.vue -->
- ```
-<template>
-  <NuxtLayout>
-    <v-app>
-      <NuxtPage />
-    </v-app>
-  </NuxtLayout>
-</template> 
+```
+Make sure you have the following versions for a smooth experience:
+- Nuxt: 3.6.5
+- Vuetify: 3.3.17
+- Storybook: 7.4.4
 ```
 
-pnpm run dev
+We are monitoring the development of the following modules:
 
+- @invictus.codes/nuxt-vuetify
+  - The module at Nuxtjs is: https://nuxt.com/modules/nuxt-vuetify
 
+- @nuxtjs/storybook
+  - https://storybook.nuxtjs.org/getting-started/setup!!!
+  - The module at Nuxtjs is: https://nuxt.com/modules/storybook
+  ```javascript
+  /* ! Important Note !
+  - Use the installation instructions from https://storybook.nuxtjs.org/getting-started/setup. The instructions from the module page did not lead to the desired outcome.
+  - Vite-plugin-vuetify can cause errors when building Storybook if exact versions are not followed. Remove vite-plugin-vuetify and follow the instructions.
+  ```
+  To integrate Storybook with Nuxt 3, please refer to the [Storybook Nuxt module documentation](https://storybook.nuxtjs.org/).
 
-Storybook "@nuxtjs/storybook" !! 
-
-https://storybook.nuxtjs.org/
-
-https://medium.com/@chakas3/unleash-your-creativity-with-the-new-storybook-nuxt-module-b7beb1441bed
-
-
-
-
-# Vuetify in Storybook 
-
-- Install Vuetify and Nuxt Vuetify Plugin: To add Vuetify to your Nuxt.js project, run the following command:
-
-pnpm add @invictus.codes/nuxt-vuetify vuetify
-Familiarity with Vuetify: A basic understanding of Vuetify, a popular Vue framework for building UIs. This includes knowing how to use Vuetify components and work with its theming system.
-
-### make sure before starting that you have right versions
-vuetify:3.3.17 , nuxt:3.6.5, storybook:7.4.4
-
-
-Tutorial: Integrating Storybook with Vuetify in Your Nuxt Application
-https://medium.com/@chakas3/tutorial-integrating-storybook-with-vuetify-in-your-nuxt-application-ac8af5a0a946 
+  For a detailed tutorial on integrating Storybook with Vuetify in your Nuxt application, you can read this [Medium article](https://medium.com/@chakas3/tutorial-integrating-storybook-with-vuetify-in-your-nuxt-application-ac8af5a0a946).
