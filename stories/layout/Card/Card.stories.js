@@ -1,79 +1,79 @@
-import Card from "@/components/layout/Card.vue";
+import Card from '@/components/layout/Card.vue'
 
 export default {
-  title: "Layout/Card",
+  title: 'Layout/Card',
   component: Card,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
     color: {
-      control: "color",
+      control: 'color'
     },
     // onClick: { action: 'clicked' },
     density: {
-      control: "select",
-      defaultValue: "default",
-      options: ["default", "comfortable", "compact"],
+      control: 'select',
+      defaultValue: 'default',
+      options: ['default', 'comfortable', 'compact']
     },
     width: {
-      control: "number",
+      control: 'number'
     },
     minWidth: {
-      control: "number",
+      control: 'number'
     },
     maxWidth: {
-      control: "number",
+      control: 'number'
     },
     height: {
-      control: "number",
+      control: 'number'
     },
     minHeight: {
-      control: "number",
+      control: 'number'
     },
     maxHeight: {
-      control: "number",
+      control: 'number'
     },
     disabled: {
-      control: "boolean",
+      control: 'boolean'
     },
     border: {
-      control: "boolean",
+      control: 'boolean'
     },
     elevation: {
-      control: "range",
-      defaultValue: "2dp",
-      maxValue: "24",
+      control: 'range',
+      defaultValue: '2dp',
+      maxValue: '24'
     },
     hover: {
-      control: "boolean",
+      control: 'boolean'
     },
     position: {
-      control: "select",
-      defaultValue: "static",
-      options: ["static", "relative", "fixed", "absolute", "sticky"],
+      control: 'select',
+      defaultValue: 'static',
+      options: ['static', 'relative', 'fixed', 'absolute', 'sticky']
     },
     rounded: {
-      control: "boolean",
+      control: 'boolean'
     },
     shaped: {
-      control: "boolean",
+      control: 'boolean'
     },
     square: {
-      control: "boolean",
+      control: 'boolean'
     },
     tile: {
-      control: "boolean",
+      control: 'boolean'
     },
     variant: {
-      control: "select",
-      defaultValue: "primary",
-      options: ["flat", "elevated", "tonal", "outlined", "plain"],
+      control: 'select',
+      defaultValue: 'primary',
+      options: ['flat', 'elevated', 'tonal', 'outlined', 'plain']
     },
     image: {
-      control: "text",
-    },
-  },
-};
+      control: 'text'
+    }
+  }
+}
 
 export const Primary = {
-  args: {},
-};
+  args: {}
+}
