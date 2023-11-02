@@ -202,20 +202,28 @@ _____
 
 Es gibt einige nützliche Module und Addons für Storybook und Vuetify, die die Arbeit mit Layouts und Komponenten in deiner Nuxt.js-Anwendung erleichtern können. Hier sind einige Empfehlungen:
 
-**@storybook/addon-viewport**: Dieses Addon ermöglicht es, die Storybook-Geschichten in verschiedenen Viewports und Bildschirmgrößen anzuzeigen, um sicherzustellen, dass das Layout auf verschiedenen Geräten korrekt funktioniert.
+### @storybook/addon-viewport: 
+Dieses Addon ermöglicht es, die Storybook-Geschichten in verschiedenen Viewports und Bildschirmgrößen anzuzeigen, um sicherzustellen, dass das Layout auf verschiedenen Geräten korrekt funktioniert.
 
-**@nuxt/image**: Das @nuxt/image-Modul bietet leistungsstarke Funktionen zur Bildoptimierung und Anpassung. Dies kann nützlich sein, um Bilder in deinen Komponenten effizient zu verarbeiten und anzuzeigen.
+### @nuxt/image: 
+Das @nuxt/image-Modul bietet leistungsstarke Funktionen zur Bildoptimierung und Anpassung. Dies kann nützlich sein, um Bilder in deinen Komponenten effizient zu verarbeiten und anzuzeigen.
 
-**@nuxt/style-resources**: Dieses Modul ermöglicht das Teilen von globalen CSS-Dateien in deiner Nuxt.js-Anwendung. Wenn du spezielle CSS-Stile für deine Storybook-Komponenten verwendest, kannst du diese leicht in Storybook integrieren.
+### @nuxt/style-resources: 
+Dieses Modul ermöglicht das Teilen von globalen CSS-Dateien in deiner Nuxt.js-Anwendung. Wenn du spezielle CSS-Stile für deine Storybook-Komponenten verwendest, kannst du diese leicht in Storybook integrieren.
 
-**@storybook/addon-controls**: Dieses Addon erleichtert die Steuerung und Anpassung von Propertys und Eingaben in deinen Storybook-Geschichten. Es ist hilfreich, wenn du Storybook-Geschichten mit vielen Eingabeoptionen hast, um das Layout dynamisch anzupassen.
+### @storybook/addon-controls: 
+Dieses Addon erleichtert die Steuerung und Anpassung von Propertys und Eingaben in deinen Storybook-Geschichten. Es ist hilfreich, wenn du Storybook-Geschichten mit vielen Eingabeoptionen hast, um das Layout dynamisch anzupassen.
 
-**@storybook/addon-knobs**: Mit diesem Addon kannst du Knobs hinzufügen, um Eingaben in deinen Storybook-Geschichten anzupassen. Es ist besonders nützlich, um Komponenten dynamisch anzupassen und verschiedene Layouts auszuprobieren.
+### @storybook/addon-knobs: 
+Mit diesem Addon kannst du Knobs hinzufügen, um Eingaben in deinen Storybook-Geschichten anzupassen. Es ist besonders nützlich, um Komponenten dynamisch anzupassen und verschiedene Layouts auszuprobieren.
 
-**@storybook/addon-viewport**: Wie bereits erwähnt, ermöglicht dieses Addon das Testen deiner Storybook-Geschichten in verschiedenen Viewports und Bildschirmgrößen.
+### @storybook/addon-viewport: 
+Wie bereits erwähnt, ermöglicht dieses Addon das Testen deiner Storybook-Geschichten in verschiedenen Viewports und Bildschirmgrößen.
 
-**@storybook/addon-backgrounds**: Mit diesem Addon kannst du den Hintergrund für deine Storybook-Geschichten anpassen, was hilfreich sein kann, um das Layout unter verschiedenen Hintergrundbedingungen zu überprüfen.
+### @storybook/addon-backgrounds: 
+Mit diesem Addon kannst du den Hintergrund für deine Storybook-Geschichten anpassen, was hilfreich sein kann, um das Layout unter verschiedenen Hintergrundbedingungen zu überprüfen.
 
-**Vuetify**: Wenn du Vuetify verwendest, bietet das Vuetify-Framework bereits eine Vielzahl von vorgefertigten Komponenten und Stilen für dein Layout. Du kannst diese Komponenten in deinen Storybook-Geschichten verwenden und anpassen.
+### Vuetify: 
+Wenn du Vuetify verwendest, bietet das Vuetify-Framework bereits eine Vielzahl von vorgefertigten Komponenten und Stilen für dein Layout. Du kannst diese Komponenten in deinen Storybook-Geschichten verwenden und anpassen.
 
 Die Auswahl der Module und Addons hängt von den spezifischen Anforderungen deines Projekts ab. Je nachdem, welche Funktionen du in Storybook und Vuetify benötigst, können diese Module und Addons die Entwicklung und das Testen deiner Komponenten erleichtern. Denke daran, die Dokumentationen der Module und Addons sorgfältig zu lesen, um ihre Verwendung und Konfiguration zu verstehen.
