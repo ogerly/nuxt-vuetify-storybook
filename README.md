@@ -126,10 +126,10 @@ Mit folgendem Befehl kannst Du dein Storybook bei Chromatic veröffentlichen:
 
 ### Publish Storybook
 ```bash
-pnpm run build-storybook
-pnpm dlx http-server ./path/to/build
-npm install chromatic --save-dev
-npx chromatic --project-token=<your-project-token>
+  pnpm run build-storybook
+  pnpm dlx http-server ./path/to/build
+  npm install chromatic --save-dev
+  npx chromatic --project-token=<your-project-token>
 ```
 
 Das Ocelot Storybook dieses Repositories findest du hier: [https://65440b50eff8b11b8e1d0939-lpcuymgxzi.chromatic.com/](https://65440b50eff8b11b8e1d0939-lpcuymgxzi.chromatic.com/)

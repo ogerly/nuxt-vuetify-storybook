@@ -1,0 +1,4 @@
+import{f as l,t as n,o as c}from"./vue.esm-bundler.fd807677.js";const o={__name:"MyExample",props:{text:{type:String,required:!1,default:"Ocelot Text"}},setup(s){return(m,u)=>(c(),l("h1",null,n(s.text),1))}},p=o;o.__docgenInfo={exportName:"default",displayName:"MyExample",description:"",tags:{},props:[{name:"text",type:{name:"string"},required:!1,defaultValue:{func:!1,value:'"Ocelot Text"'}}],sourceFiles:["/home/tulex/Entwicklung/Projekte/NUXT/N4/stories/layout/MyExample/MyExample.vue"]};const x={title:"Layout/MyExample",component:p,tags:["autodocs"],argTypes:{text:{control:"text"}}},e={args:{}};var t,a,r;e.parameters={...e.parameters,docs:{...(t=e.parameters)==null?void 0:t.docs,source:{originalSource:`{
+  args: {}
+}`,...(r=(a=e.parameters)==null?void 0:a.docs)==null?void 0:r.source}}};const y=["Primary"];export{e as Primary,y as __namedExportsOrder,x as default};
+//# sourceMappingURL=MyExample.stories.dae6245f.js.map

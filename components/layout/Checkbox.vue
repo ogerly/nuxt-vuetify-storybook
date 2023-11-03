@@ -15,7 +15,6 @@
 </template>
 <script setup>
 import { ref } from "vue";
-import { VCheckbox } from "vuetify/components";
 const model = ref(false);
 const props = defineProps({
   label: { type: String, required: false },
