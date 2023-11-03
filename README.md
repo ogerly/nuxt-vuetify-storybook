@@ -70,6 +70,20 @@ yarn preview
 For more information on deployment, please refer to the [Nuxt deployment documentation](https://nuxt.com/docs/getting-started/deployment).
 
 
+# Storybook
+Nach dem start der Anwendung kannst du unter :6006 das Storybook aufrufen. 
+
+# Storybook to Cromatic
+Du kannst dein Storybook mit Cromatic verdinden. 
+Dazu benötigst du einen Account bei https://www.chromatic.com/
+
+Mit folgenden Befehl kannst Du das Storybook bei Cromatic veröffentlichen. 
+```bash
+  npx chromatic --project-token=<PROJECT_TOKEN>
+```
+
+
+
 
 # Reconstructing the Starter:
 
