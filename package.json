@@ -11,10 +11,16 @@
     "lint": "eslint .",
     "lintfix": "eslint . --fix",
     "storybook": "storybook dev --port 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "chromatic"
+  },
+  "dependencies": {
+    "nuxt": "3.6.5",
+    "vue": "^3.3.7",
+    "vuetify": "^3.3.17",
+    "@invictus.codes/nuxt-vuetify": "^0.3.0"
   },
   "devDependencies": {
-    "@invictus.codes/nuxt-vuetify": "^0.3.0",
     "@nuxt/devtools": "^1.0.0",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@nuxtjs/eslint-module": "^4.1.0",
@@ -31,13 +37,13 @@
     "@types/node": "^20.8.10",
     "chromatic": "^7.6.0",
     "eslint": "^8.52.0",
-    "nuxt": "3.6.5",
     "nuxt-mdi": "^1.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.69.5",
-    "storybook": "7.5.1",
-    "vue": "^3.3.7",
-    "vuetify": "^3.3.17"
-  }
+    "storybook": "7.5.1"
+  },
+  "version": "",
+  "readme": "ERROR: No README data found!",
+  "_id": "nuxt-app@"
 }
