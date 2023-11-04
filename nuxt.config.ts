@@ -1,20 +1,24 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@invictus.codes/nuxt-vuetify', 'nuxt-mdi', '@nuxtjs/storybook', '@nuxtjs/eslint-module'],
+  modules: [
+    "@invictus.codes/nuxt-vuetify",
+    "nuxt-mdi",
+    "@nuxtjs/storybook",
+    "@nuxtjs/eslint-module",
+  ],
   vuetify: {
-    vuetifyOptions: {
-    },
+    vuetifyOptions: {},
     moduleOptions: {
       treeshaking: false,
       useIconCDN: true,
-      styles: 'none',
+      styles: "none",
       autoImport: false,
-      useVuetifyLabs: true
-    }
+      useVuetifyLabs: true,
+    },
   },
   storybook: {
-    url: 'http://localhost:6006',
-    storybookRoute: '/__storybook__',
-    port: 6006
-  }
-})
+    url: "http://localhost:6006",
+    storybookRoute: "/__storybook__",
+    port: 6006,
+  },
+});

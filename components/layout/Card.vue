@@ -1,14 +1,6 @@
 <template>
-  <v-card
-    class="mx-auto"
-    :loading="loading"
-    max-width="344"
-  >
-    <v-img
-      :src="image"
-      height="200px"
-      cover
-    ></v-img>
+  <v-card class="mx-auto" :loading="loading" max-width="344">
+    <v-img :src="image" height="200px" cover></v-img>
 
     <v-card-title>
       {{ title }}
@@ -19,10 +11,7 @@
     </v-card-subtitle>
 
     <v-card-actions>
-      <v-btn
-        color="orange-lighten-2"
-        variant="text"
-      >
+      <v-btn color="orange-lighten-2" variant="text">
         {{ btnText }}
       </v-btn>
 
@@ -30,12 +19,12 @@
 
       <v-btn
         :icon="show ? 'mdi-chevron-up' : 'mdi-chevron-down'"
-        @click="show = !show"
+        @click="show = !showExpand"
       ></v-btn>
     </v-card-actions>
 
     <v-expand-transition>
-      <div v-show="show">
+      <div v-show="showExpand">
         <v-divider></v-divider>
 
         <v-card-text>
@@ -50,13 +39,18 @@ const props = defineProps({
   show: { type: Boolean, required: false },
   loading: { type: Boolean, required: false },
   title: { type: String, required: false },
-  subtitle: {  type: String, required: false },
+  subtitle: { type: String, required: false },
   text: { type: String, required: false },
   btnText: { type: String, required: false },
   image: { type: String, required: false },
-  onError: { type: Function, required: false, default: (e) => {
+  onError: {
+    type: Function,
+    required: false,
+    default: (e) => {
       e.target.src = "https://cdn.vuetifyjs.com/images/cards/cooking.png";
-    }
-  }
-})
+    },
+  },
+});
+
+const showExpand = ref(show);
 </script>

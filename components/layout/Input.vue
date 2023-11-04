@@ -1,23 +1,24 @@
 <script setup>
-import { ref } from "vue";
-const value = ref("");
-
 const props = defineProps({
-  label: { type: String, required: false },
-  placeholder: { type: String, required: false },
-  prependIcon: { type: String, required: false },
-  prependInnerIcon: { type: String, required: false },
-  appendIcon: { type: String, required: false },
-  appendInnerIcon: { type: String, required: false },
-  messages: { type: String, required: false },
-  error: { type: String, required: false },
-  errorMessages: { type: String, required: false },
-  maxErrors: { type: Number, required: false },
-  disabled: { type: Boolean, required: false },
-  density: { type: String, required: false },
-  readonly: { type: Boolean, required: false },
-  clearable: { type: Boolean, required: false },
-  focused: { type: Boolean, required: false },
+  label: { type: String, default: "Ocelot Text", required: false },
+  placeholder: { type: String, default: "Ocelot Placeholder", required: false },
+  prependIcon: { type: String, default: "$vuetify", required: false },
+  prependInnerIcon: { type: String, default: "$vuetify", required: false },
+  appendIcon: { type: String, default: "$vuetify", required: false },
+  appendInnerIcon: { type: String, default: "$vuetify", required: false },
+  messages: { type: String, default: "Ocelot Messages", required: false },
+  error: { type: String, default: "Ocelot Error", required: false },
+  errorMessages: {
+    type: String,
+    default: "Ocelot Error Messages",
+    required: false,
+  },
+  maxErrors: { type: Number, default: 3, required: false },
+  disabled: { type: Boolean, default: false, required: false },
+  density: { type: String, default: "comfortable", required: false },
+  readonly: { type: Boolean, default: false, required: false },
+  clearable: { type: Boolean, default: false, required: false },
+  focused: { type: Boolean, default: false, required: false },
   rules: {
     type: Array,
     required: false,
@@ -32,13 +33,14 @@ const props = defineProps({
     ],
   },
   validateOn: { type: String, required: false },
-  ValidationValue: { type: String, required: false },
+  validationValue: { type: String, required: false },
 });
 </script>
+
 <template>
   <v-form>
     <v-text-field
-      v-model="value"
+      v-model="model"
       :label="label"
       :placeholder="placeholder"
       :prepend-icon="prependIcon"
@@ -55,8 +57,8 @@ const props = defineProps({
       :focused="focused"
       :rules="rules"
       :validate-on="validateOn"
-      :ValidationValue="ValidationValue"
-      @input="$emit('input', $event)"
+      :validation-value="validationValue"
+      :error="error"
     ></v-text-field>
   </v-form>
 </template>

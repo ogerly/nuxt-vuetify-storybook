@@ -20,7 +20,6 @@
 
 <script>
 export default {
-
   props: {
     text: { type: String, required: false, default: "Ocelot" },
     size: { type: String, required: false },

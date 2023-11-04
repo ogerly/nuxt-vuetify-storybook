@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-const menu = ref(false);
+const model = ref(false);
 
 const props = defineProps({
   text: {
@@ -44,7 +44,7 @@ const props = defineProps({
 </script>
 <template>
   <v-menu
-    v-model="menu"
+    v-model="model"
     :open-on-click="openOnClick"
     :open-on-hover="openOnHover"
     :open-on-focus="openOnFocus"

@@ -64,10 +64,12 @@ yarn preview
 
 For more information on deployment, please refer to the [Nuxt deployment documentation](https://nuxt.com/docs/getting-started/deployment).
 
-____
-____
+---
+
+---
 
 # Frontententwicklung
+
 Nuxt, Vuetify, Storybook, Figma, Cromatic
 
 Z# Zusammenspiel von Storybook, Figma und Chromatic
@@ -89,27 +91,25 @@ Das Zusammenspiel von Storybook, Figma und Chromatic spielt eine entscheidende R
 - **Zweck**: Chromatic ist ein Tool für das visuelle Regressions- und UI-Testing. Es ermöglicht die kontinuierliche Überwachung von UI-Änderungen und die frühzeitige Erkennung von visuellen Problemen.
 - **Verwendung**: Chromatic wird verwendet, um die visuelle Konsistenz von UI-Komponenten sicherzustellen, insbesondere in Bezug auf Designänderungen und -aktualisierungen. Es erfasst Screenshots von Storybook-Komponenten und vergleicht sie, um visuelle Regressionen zu erkennen.
 
-    - Das Ocelot Storybook dieses Repositories findest du hier: [https://65440b50eff8b11b8e1d0939-lpcuymgxzi.chromatic.com/](https://65440b50eff8b11b8e1d0939-lpcuymgxzi.chromatic.com/)
+  - Das Ocelot Storybook dieses Repositories findest du hier: [https://65440b50eff8b11b8e1d0939-lpcuymgxzi.chromatic.com/](https://65440b50eff8b11b8e1d0939-lpcuymgxzi.chromatic.com/)
 
-    - Das Ocelot Storybook Build bei Cromatic dieses Repositories findest du hier: [https://www.chromatic.com/build?appId=65440b50eff8b11b8e1d0939](https://www.chromatic.com/build?appId=65440b50eff8b11b8e1d0939)
-
-
+  - Das Ocelot Storybook Build bei Cromatic dieses Repositories findest du hier: [https://www.chromatic.com/build?appId=65440b50eff8b11b8e1d0939](https://www.chromatic.com/build?appId=65440b50eff8b11b8e1d0939)
 
 ## Zusammenspiel
 
 1. **Designer und Figma**:
+
    - Designer verwenden Figma, um das visuelle Design zu erstellen und Prototypen zu erstellen.
    - Sie teilen ihre Designarbeiten mit dem Entwicklungsteam und dem Kunden über Figma.
 
 2. **Entwickler und Storybook**:
+
    - Entwickler verwenden Storybook, um die erstellten Komponenten basierend auf den Figma-Designs zu implementieren und zu testen.
    - Sie erstellen Storybook-Geschichten (Stories), um die Funktionalität und das Aussehen der Komponenten zu präsentieren.
 
 3. **Chromatic und Tests**:
    - Chromatic kann in den Entwicklungsprozess integriert werden, um sicherzustellen, dass visuelle Regressionen vermieden werden.
    - Bei jeder Änderung in Storybook werden automatisch Screenshots erstellt und mit den vorherigen Versionen verglichen. Jede visuelle Abweichung wird erkannt und protokolliert.
-
-    
 4. **Kunde und Freigabe**:
    - Der Kunde kann über Figma den aktuellen Stand des Designs und Prototypen überprüfen.
    - Mit Chromatic kann der Kunde sicherstellen, dass die Implementierung der UI-Komponenten den Designvorgaben entspricht, indem er visuelle Regressionen überwacht.
@@ -117,14 +117,17 @@ Das Zusammenspiel von Storybook, Figma und Chromatic spielt eine entscheidende R
 Das Zusammenspiel von Storybook, Figma und Chromatic fördert eine nahtlose Zusammenarbeit zwischen Designern und Entwicklern, ermöglicht eine effiziente Iteration und sorgt dafür, dass die erstellten UI-Komponenten den Designspezifikationen entsprechen. Dies trägt zur Qualität und Konsistenz des Endprodukts bei und erleichtert die Kommunikation und Freigabe mit dem Kunden.
 
 ### Storybook
+
 Nach dem Start der Anwendung kannst du unter [http://localhost:6006/](http://localhost:6006/) das Storybook aufrufen.
 
 ### Storybook to Chromatic
+
 Du kannst dein Storybook mit Chromatic verbinden. Dazu benötigst du einen Account bei [Chromatic](https://www.chromatic.com/).
 
 Mit folgendem Befehl kannst Du dein Storybook bei Chromatic veröffentlichen:
 
 ### Publish Storybook
+
 ```bash
   pnpm run build-storybook
   pnpm dlx http-server ./path/to/build
@@ -134,15 +137,24 @@ Mit folgendem Befehl kannst Du dein Storybook bei Chromatic veröffentlichen:
 
 Das Ocelot Storybook dieses Repositories findest du hier: [https://65440b50eff8b11b8e1d0939-lpcuymgxzi.chromatic.com/](https://65440b50eff8b11b8e1d0939-lpcuymgxzi.chromatic.com/)
 
-___
-___
-___
+### If a Storybook build has been made, the Storybook can be accessed via this command at localhost:8080
+
+```bash
+  pnpm dlx http-server ./storybook-static
+```
+
+---
+
+---
+
+---
 
 ## Reconstructing the Starter:
 
 We have built the starter as follows.
 
 ### The most crucial point is to use precise versions at the moment.
+
 - Nuxt: 3.6.5
 - Vuetify: 3.3.17
 - Storybook: 7.4.4
@@ -162,7 +174,7 @@ pnpm install
 
 ```bash
 npx storybook-nuxt init
-pnpm add @invictus.codes/nuxt-vuetify vuetify 
+pnpm add @invictus.codes/nuxt-vuetify vuetify
 ```
 
 3. Update your `nuxt.config.ts` with the following configuration:
@@ -170,24 +182,27 @@ pnpm add @invictus.codes/nuxt-vuetify vuetify
 ```typescript
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@invictus.codes/nuxt-vuetify', '@nuxtjs/storybook', '@nuxtjs/eslint-module'],
+  modules: [
+    "@invictus.codes/nuxt-vuetify",
+    "@nuxtjs/storybook",
+    "@nuxtjs/eslint-module",
+  ],
   vuetify: {
-    vuetifyOptions: {
-    },
+    vuetifyOptions: {},
     moduleOptions: {
       treeshaking: false,
       useIconCDN: true,
-      styles: 'none',
+      styles: "none",
       autoImport: false,
-      useVuetifyLabs: true
+      useVuetifyLabs: true,
     },
   },
   storybook: {
-    url: 'http://localhost:6006',
-    storybookRoute: '/__storybook__',
-    port: 6006
+    url: "http://localhost:6006",
+    storybookRoute: "/__storybook__",
+    port: 6006,
   },
-})
+});
 ```
 
 4. Start the development server with Vuetify:
@@ -210,16 +225,20 @@ Make sure you have the following versions for a smooth experience:
 We are monitoring the development of the following modules:
 
 - @invictus.codes/nuxt-vuetify
+
   - The module at Nuxtjs is: [https://nuxt.com/modules/nuxt-vuetify](https://nuxt.com/modules/nuxt-vuetify)
 
 - @nuxtjs/storybook
+
   - [https://storybook.nuxtjs.org/getting-started/setup!!!](https://storybook.nuxtjs.org/getting-started/setup!!!)
   - The module at Nuxtjs is: [https://nuxt.com/modules/storybook](https://nuxt.com/modules/storybook)
+
   ```
   /* ! Important Note !
   - Use the installation instructions from [https://storybook.nuxtjs.org/getting-started/setup](https://storybook.nuxtjs.org/getting-started/setup). The instructions from the module page did not lead to the desired outcome.
   - Vite-plugin-vuetify can cause errors when building Storybook if exact versions are not followed. Remove vite-plugin-vuetify and follow the instructions.
   ```
+
   To integrate Storybook with Nuxt 3, please refer to the [Storybook Nuxt module documentation](https://storybook.nuxtjs.org/).
 
   For a detailed tutorial on integrating Storybook with Vuetify in your Nuxt application, you can read this [Medium article](https://medium.com/@chakas3/tutorial-integrating-storybook-with-vuetify-in-your-nuxt-application-ac8af5a0a946).

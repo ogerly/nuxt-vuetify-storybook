@@ -8,20 +8,24 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint": "eslint .",
-    "lintfix": "eslint . --fix",
+    "lint:js": "eslint --ext \".ts,.vue\" --ignore-path .gitignore .",
+    "lint:prettier": "prettier --check .",
+    "lint": "pnpm lint:js && pnpm lint:prettier",
+    "lintfix": "prettier --write --list-different . && pnpm lint:js --fix",
     "storybook": "storybook dev --port 6006",
     "build-storybook": "storybook build",
     "chromatic": "chromatic"
   },
   "dependencies": {
+    "@invictus.codes/nuxt-vuetify": "^0.3.0",
     "nuxt": "3.6.5",
     "vue": "^3.3.7",
-    "vuetify": "^3.3.17",
-    "@invictus.codes/nuxt-vuetify": "^0.3.0"
+    "vuetify": "^3.3.17"
   },
   "devDependencies": {
     "@nuxt/devtools": "^1.0.0",
+    "@nuxt/types": "^2.17.2",
+    "@nuxt/typescript-build": "^3.0.1",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@nuxtjs/eslint-module": "^4.1.0",
     "@nuxtjs/storybook": "7.0.0",
@@ -37,11 +41,15 @@
     "@types/node": "^20.8.10",
     "chromatic": "^7.6.0",
     "eslint": "^8.52.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
     "nuxt-mdi": "^1.1.1",
+    "prettier": "^3.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.69.5",
-    "storybook": "7.5.1"
+    "storybook": "7.5.1",
+    "typescript": "^5.2.2"
   },
   "version": "",
   "readme": "ERROR: No README data found!",

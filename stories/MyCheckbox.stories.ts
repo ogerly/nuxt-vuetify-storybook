@@ -1,18 +1,22 @@
-import MyCheckbox from './MyCheckbox.vue'
+import MyCheckbox from "./MyCheckbox.vue";
 
 export default {
-  title: 'Example/Checkbox',
+  title: "Example/Checkbox",
   component: MyCheckbox,
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   argTypes: {
     label: {
-      control: 'text'
-    }
-  }
-}
+      control: "text",
+    },
+    appendIcon: {
+      control: "select",
+      options: ["$vuetify", "mdi-Plus", "mdi-Account"],
+    },
+  },
+};
 
 export const Primary = {
   args: {
-    label: 'Checkbox'
-  }
-}
+    label: "Checkbox",
+  },
+};
