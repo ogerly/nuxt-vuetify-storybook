@@ -1,4 +1,0 @@
-import{_ as a}from"./welcome.6bf33815.js";import{o as n,f as m,a as _,F as l,e as u}from"./vue.esm-bundler.fd807677.js";import{_ as p}from"./_plugin-vue_export-helper.c27b6911.js";const s={},d=u("h1",null," Welcome Nuxt to Storybook ",-1);function i(N,f){const r=a;return n(),m(l,null,[d,_(r)],64)}const x=p(s,[["render",i]]);s.__docgenInfo={displayName:"MyWelcome",description:"",tags:{},sourceFiles:["/home/tulex/Entwicklung/Projekte/NUXT/N4/stories/MyWelcome.vue"]};const k={title:"Example/NuxtWelcome",component:x,tags:["autodocs"]},e={args:{}};var o,t,c;e.parameters={...e.parameters,docs:{...(o=e.parameters)==null?void 0:o.docs,source:{originalSource:`{
-  args: {}
-}`,...(c=(t=e.parameters)==null?void 0:t.docs)==null?void 0:c.source}}};const h=["NuxtWelcomeStory"];export{e as NuxtWelcomeStory,h as __namedExportsOrder,k as default};
-//# sourceMappingURL=MyNuxtWelcome.stories.52346a78.js.map

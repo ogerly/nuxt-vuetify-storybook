@@ -1,6 +1,0 @@
-import{r as p,c as u,o as d}from"./vue.esm-bundler.fd807677.js";const n={__name:"MyCheckbox",props:{model:{type:Boolean,default:!1},label:{type:String,default:"Check me"}},setup(r){const o=r;return(i,a)=>{const c=p("v-checkbox");return d(),u(c,{modelValue:o.model,"onUpdate:modelValue":a[0]||(a[0]=m=>o.model=m),label:o.label,"append-icon":"mdi-magnify"},null,8,["modelValue","label"])}}},b=n;n.__docgenInfo={exportName:"default",displayName:"MyCheckbox",description:"",tags:{},props:[{name:"model",type:{name:"boolean"},defaultValue:{func:!1,value:"false"}},{name:"label",type:{name:"string"},defaultValue:{func:!1,value:"'Check me'"}}],sourceFiles:["/home/tulex/Entwicklung/Projekte/NUXT/N4/stories/MyCheckbox.vue"]};const f={title:"Example/Checkbox",component:b,tags:["autodocs"],argTypes:{label:{control:"text"}}},e={args:{label:"Checkbox"}};var l,t,s;e.parameters={...e.parameters,docs:{...(l=e.parameters)==null?void 0:l.docs,source:{originalSource:`{
-  args: {
-    label: 'Checkbox'
-  }
-}`,...(s=(t=e.parameters)==null?void 0:t.docs)==null?void 0:s.source}}};const k=["Primary"];export{e as Primary,k as __namedExportsOrder,f as default};
-//# sourceMappingURL=MyCheckbox.stories.9cc6e2bd.js.map
