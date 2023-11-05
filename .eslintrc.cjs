@@ -10,8 +10,9 @@ module.exports = {
   },
   extends: [
     "@nuxtjs",
-    "plugin:prettier/recommended",
-    "plugin:nuxt/recommended",
+    // "plugin:eslint/recommended",
+    // "plugin:prettier/recommended",
+    // "plugin:nuxt/recommended",
   ],
   plugins: ["nuxt"],
   rules: {

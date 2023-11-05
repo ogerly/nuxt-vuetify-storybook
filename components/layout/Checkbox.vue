@@ -10,12 +10,12 @@
       :prepend-icon="prependIcon"
       :error="error"
       :error-messages="errorMessages"
-    ></v-checkbox>
+    />
   </div>
 </template>
 <script setup>
-import { ref } from "vue";
-const model = ref(false);
+import { ref } from 'vue'
+const model = ref(false)
 const props = defineProps({
   label: { type: String, required: false },
   color: { type: String, required: false },
@@ -24,6 +24,6 @@ const props = defineProps({
   appendIcon: { type: String, required: false },
   prependIcon: { type: String, required: false },
   error: { type: Boolean, required: false },
-  errorMessages: { type: String, required: false },
-});
+  errorMessages: { type: String, required: false }
+})
 </script>

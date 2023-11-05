@@ -26,10 +26,10 @@
         <h1>Acme</h1>
       </div>
       <div>
-        <span v-if="user" class="welcome"
-          >Welcome, <b>{{ user.name }}</b
-          >!</span
-        >
+        <span
+          v-if="user"
+          class="welcome"
+        >Welcome, <b>{{ user.name }}</b>!</span>
         <my-button
           v-if="user"
           size="small"
@@ -55,11 +55,11 @@
 </template>
 
 <script>
-import "./header.css";
-import MyButton from "./Button.vue";
+import './header.css'
+import MyButton from './Button.vue'
 
 export default {
-  name: "MyHeader",
+  name: 'MyHeader',
 
   components: { MyButton },
 
@@ -68,12 +68,12 @@ export default {
       type: Object,
       default: () => {
         return {
-          name: "Jane Doe",
-        };
-      },
-    },
+          name: 'Jane Doe'
+        }
+      }
+    }
   },
 
-  emits: ["login", "logout", "createAccount"],
-};
+  emits: ['login', 'logout', 'createAccount']
+}
 </script>

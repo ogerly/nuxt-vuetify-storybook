@@ -5,8 +5,8 @@ const props = defineProps({
   size: { type: String, required: false },
   variant: { type: String, required: false },
   icon: { type: String, required: false },
-  image: { type: String, required: false },
-});
+  image: { type: String, required: false }
+})
 </script>
 <template>
   <v-avatar
@@ -15,6 +15,7 @@ const props = defineProps({
     :variant="variant"
     :icon="icon"
     :image="image"
-    >{{ text }}</v-avatar
   >
+    {{ text }}
+  </v-avatar>
 </template>

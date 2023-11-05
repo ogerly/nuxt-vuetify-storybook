@@ -1,6 +1,6 @@
 <template>
   <v-card class="mx-auto" :loading="loading" max-width="344">
-    <v-img :src="image" height="200px" cover></v-img>
+    <v-img :src="image" height="200px" cover />
 
     <v-card-title>
       {{ title }}
@@ -15,17 +15,17 @@
         {{ btnText }}
       </v-btn>
 
-      <v-spacer></v-spacer>
+      <v-spacer />
 
       <v-btn
-        :icon="showExpand ? 'mdi-chevron-up' : 'mdi-chevron-down'"
-        @click="showExpand = !showExpand"
-      ></v-btn>
+        :icon="show ? 'mdi-chevron-up' : 'mdi-chevron-down'"
+        @click="show = !show"
+      />
     </v-card-actions>
 
     <v-expand-transition>
-      <div v-show="showExpand">
-        <v-divider></v-divider>
+      <div v-show="show">
+        <v-divider />
 
         <v-card-text>
           {{ text }}
@@ -36,7 +36,6 @@
 </template>
 <script setup>
 const props = defineProps({
-  show: { type: Boolean, required: false },
   loading: { type: Boolean, required: false },
   title: { type: String, required: false },
   subtitle: { type: String, required: false },
@@ -47,10 +46,10 @@ const props = defineProps({
     type: Function,
     required: false,
     default: (e) => {
-      e.target.src = "https://cdn.vuetifyjs.com/images/cards/cooking.png";
-    },
-  },
-});
+      e.target.src = 'https://cdn.vuetifyjs.com/images/cards/cooking.png'
+    }
+  }
+})
 
-const showExpand = ref(show);
+const show = ref(false)
 </script>
