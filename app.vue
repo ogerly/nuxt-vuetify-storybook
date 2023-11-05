@@ -11,5 +11,5 @@
   </NuxtLayout>
 </template>
 <script setup>
-const model = ref("");
+const model = ref(null);
 </script>

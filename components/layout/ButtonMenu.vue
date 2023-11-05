@@ -49,7 +49,7 @@ const props = defineProps({
     :open-on-hover="openOnHover"
     :open-on-focus="openOnFocus"
   >
-    <template #activator="{ props }">
+    <template #activator>
       <v-btn
         v-bind="props"
         :text="text"

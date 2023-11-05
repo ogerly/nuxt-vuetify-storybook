@@ -1,25 +1,13 @@
+<!-- eslint-disable-next-line no-undef -->
 <template>
   <v-checkbox
-    v-model="localModel"
+    v-model="model"
     :label="label"
     :append-icon="appendIcon"
   ></v-checkbox>
 </template>
 <script setup>
-const props = defineProps({
-  model: {
-    type: Boolean,
-    default: false,
-  },
-  label: {
-    type: String,
-    default: "Check me",
-  },
-  appendIcon: {
-    type: String,
-    default: "$vuetify",
-  },
-});
-
-const localModel = ref(model);
+const label = ref("Check me");
+const appendIcon = ref("$vuetify");
+const model = ref(false);
 </script>

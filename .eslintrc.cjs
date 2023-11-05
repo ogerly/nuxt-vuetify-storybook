@@ -8,10 +8,17 @@ module.exports = {
   parserOptions: {
     parser: "@typescript-eslint/parser",
   },
-  extends: ["@nuxtjs/eslint-config-typescript", "plugin:prettier/recommended"],
-  plugins: [],
+  extends: [
+    "@nuxtjs",
+    "plugin:prettier/recommended",
+    "plugin:nuxt/recommended",
+  ],
+  plugins: ["nuxt"],
   rules: {
     "vue/multi-word-component-names": "off",
     "vue/require-default-prop": "off",
+    "vue/script-setup-uses-vars": "off",
+    "no-unused-vars": "off",
+    "no-undef": "off",
   },
 };

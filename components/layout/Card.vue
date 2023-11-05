@@ -18,8 +18,8 @@
       <v-spacer></v-spacer>
 
       <v-btn
-        :icon="show ? 'mdi-chevron-up' : 'mdi-chevron-down'"
-        @click="show = !showExpand"
+        :icon="showExpand ? 'mdi-chevron-up' : 'mdi-chevron-down'"
+        @click="showExpand = !showExpand"
       ></v-btn>
     </v-card-actions>
 
