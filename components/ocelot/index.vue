@@ -66,18 +66,18 @@
 </template>
 <script setup>
 const featuresFrontend = [
-  { title: 'Nuxt', variant: 'elevated' },
-  { title: 'Vuetify', variant: 'elevated' },
-  { title: 'Storybook', variant: 'elevated' },
-  { title: 'Figma', variant: 'elevated' },
-  { title: 'Cromatic', variant: 'elevated' }
-]
+  { title: "Nuxt", variant: "elevated" },
+  { title: "Vuetify", variant: "elevated" },
+  { title: "Storybook", variant: "elevated" },
+  { title: "Figma", variant: "elevated" },
+  { title: "Cromatic", variant: "elevated" },
+];
 
 const featuresDocs = [
-  { title: 'Docsify', variant: 'elevated' },
-  { title: 'GitHub', variant: 'elevated' },
-  { title: 'Stackplitz', variant: 'elevated' }
-]
+  { title: "Docsify", variant: "elevated" },
+  { title: "GitHub", variant: "elevated" },
+  { title: "Stackplitz", variant: "elevated" },
+];
 
-const text = ['elevated', 'flat', 'tonal', 'outlined']
+const text = ["elevated", "flat", "tonal", "outlined"];
 </script>

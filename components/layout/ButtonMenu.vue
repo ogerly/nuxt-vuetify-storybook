@@ -1,33 +1,33 @@
 <script setup>
-import { ref } from 'vue'
-const model = ref(false)
+import { ref } from "vue";
+const model = ref(false);
 
 const props = defineProps({
   text: {
     type: String,
-    default: 'Ocelot Menu'
+    default: "Ocelot Menu",
   },
   items: {
     type: Array,
     required: false,
     default: () => {
-      return [{ title: 'Item 1' }, { title: 'Item 2' }, { title: 'Item 3' }]
-    }
+      return [{ title: "Item 1" }, { title: "Item 2" }, { title: "Item 3" }];
+    },
   },
   openOnClick: {
     type: Boolean,
     required: false,
-    default: true
+    default: true,
   },
   openOnHover: {
     type: Boolean,
     required: false,
-    default: false
+    default: false,
   },
   openOnFocus: {
     type: Boolean,
     required: false,
-    default: false
+    default: false,
   },
   size: { type: String, required: false },
   variant: { type: String, required: false },
@@ -39,8 +39,8 @@ const props = defineProps({
   icon: { type: String, required: false },
   density: { type: String, required: false },
   elevation: { type: Number, required: false },
-  active: { type: Boolean, required: false }
-})
+  active: { type: Boolean, required: false },
+});
 </script>
 <template>
   <v-menu

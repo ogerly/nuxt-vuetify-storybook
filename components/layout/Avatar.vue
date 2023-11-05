@@ -5,8 +5,8 @@ const props = defineProps({
   size: { type: String, required: false },
   variant: { type: String, required: false },
   icon: { type: String, required: false },
-  image: { type: String, required: false }
-})
+  image: { type: String, required: false },
+});
 </script>
 <template>
   <v-avatar

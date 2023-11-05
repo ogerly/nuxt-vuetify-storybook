@@ -46,10 +46,10 @@ const props = defineProps({
     type: Function,
     required: false,
     default: (e) => {
-      e.target.src = 'https://cdn.vuetifyjs.com/images/cards/cooking.png'
-    }
-  }
-})
+      e.target.src = "https://cdn.vuetifyjs.com/images/cards/cooking.png";
+    },
+  },
+});
 
-const show = ref(false)
+const show = ref(false);
 </script>

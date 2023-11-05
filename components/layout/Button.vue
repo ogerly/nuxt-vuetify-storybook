@@ -20,7 +20,7 @@
 <script>
 export default {
   props: {
-    text: { type: String, required: false, default: 'Ocelot' },
+    text: { type: String, required: false, default: "Ocelot" },
     size: { type: String, required: false },
     variant: { type: String, required: false },
     color: { type: String, required: false },
@@ -31,7 +31,7 @@ export default {
     icon: { type: String, required: false },
     density: { type: String, required: false },
     elevation: { type: Number, required: false },
-    active: { type: Boolean, required: false }
-  }
-}
+    active: { type: Boolean, required: false },
+  },
+};
 </script>

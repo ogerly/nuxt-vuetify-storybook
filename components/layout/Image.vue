@@ -1,6 +1,6 @@
 <script setup>
 const props = defineProps({
-  src: { type: String, required: false, default: '/ocelot.png' },
+  src: { type: String, required: false, default: "/ocelot.png" },
   lazySrc: { type: String, required: false },
   width: { type: String, required: false },
   height: { type: String, required: false },
@@ -8,15 +8,15 @@ const props = defineProps({
   minHeight: { type: String, required: false },
   maxWidth: { type: String, required: false },
   maxHeight: { type: String, required: false },
-  aspectRatio: { type: String, required: false, default: '16/9' },
+  aspectRatio: { type: String, required: false, default: "16/9" },
   cover: { type: Boolean, required: false, default: false },
   gradient: {
     type: String,
     required: false,
-    default: 'to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)'
+    default: "to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)",
   },
-  alt: { type: String, required: false, default: 'Ocelot' }
-})
+  alt: { type: String, required: false, default: "Ocelot" },
+});
 </script>
 <template>
   <v-img
@@ -36,10 +36,7 @@ const props = defineProps({
     <!-- Display an overlay while the image is loading. -->
     <template #placeholder>
       <div class="d-flex align-center justify-center fill-height">
-        <v-progress-circular
-          color="grey-lighten-4"
-          indeterminate
-        />
+        <v-progress-circular color="grey-lighten-4" indeterminate />
       </div>
     </template>
   </v-img>

@@ -1,8 +1,8 @@
 <script setup>
 const props = defineProps({
-  text: { type: String, required: false, default: 'Ocelot Text' },
-  icon: { type: String, required: false, default: '$vuetify' }
-})
+  text: { type: String, required: false, default: "Ocelot Text" },
+  icon: { type: String, required: false, default: "$vuetify" },
+});
 </script>
 <template>
   <v-input

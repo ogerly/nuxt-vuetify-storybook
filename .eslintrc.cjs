@@ -10,9 +10,10 @@ module.exports = {
   },
   extends: [
     "@nuxtjs",
-    // "plugin:eslint/recommended",
-    // "plugin:prettier/recommended",
-    // "plugin:nuxt/recommended",
+    "plugin:vue/vue3-essential",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:nuxt/recommended",
   ],
   plugins: ["nuxt"],
   rules: {
@@ -21,5 +22,6 @@ module.exports = {
     "vue/script-setup-uses-vars": "off",
     "no-unused-vars": "off",
     "no-undef": "off",
+    "@typescript-eslint/no-unused-vars": "off",
   },
 };

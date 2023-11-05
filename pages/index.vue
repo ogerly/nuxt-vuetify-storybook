@@ -2,9 +2,7 @@
   <div>
     <ocelot />
     <v-container>
-      <nuxt-link to="/startpage">
-        Startpage
-      </nuxt-link>
+      <nuxt-link to="/startpage"> Startpage </nuxt-link>
       <v-text-field v-model="model" append-icon="mdi-magnify" />
       <v-checkbox v-model="model" append-icon="mdi-check" />
       <LayoutCard />
@@ -14,7 +12,7 @@
 </template>
 <script setup>
 definePageMeta({
-  layout: 'default'
-})
-const model = ref(null)
+  layout: "default",
+});
+const model = ref(null);
 </script>

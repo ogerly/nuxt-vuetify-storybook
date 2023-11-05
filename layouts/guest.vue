@@ -23,9 +23,9 @@
 </template>
 <script setup>
 const icons = ref([
-  'mdi-facebook',
-  'mdi-twitter',
-  'mdi-linkedin',
-  'mdi-instagram'
-])
+  "mdi-facebook",
+  "mdi-twitter",
+  "mdi-linkedin",
+  "mdi-instagram",
+]);
 </script>
