@@ -19,7 +19,9 @@
           </v-card-item>
 
           <v-card-actions>
-            <v-btn> Button </v-btn>
+            <NuxtLink :src="variant.url" target="_blank">
+              <v-btn> Button </v-btn>
+            </NuxtLink>
           </v-card-actions>
         </v-card>
       </v-col>
@@ -44,7 +46,7 @@
           </v-card-item>
 
           <v-card-actions>
-            <v-btn> Button </v-btn>
+            <v-btn :to="variant.url"> Button </v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
@@ -66,11 +68,23 @@
 </template>
 <script setup>
 const featuresFrontend = [
-  { title: "Nuxt", variant: "elevated" },
-  { title: "Vuetify", variant: "elevated" },
-  { title: "Storybook", variant: "elevated" },
-  { title: "Figma", variant: "elevated" },
-  { title: "Cromatic", variant: "elevated" },
+  { title: "Nuxt", variant: "elevated", url: "https://nuxtjs.org/" },
+  { title: "Vuetify", variant: "elevated", url: "https://vuetifyjs.com/en/" },
+  {
+    title: "Storybook",
+    variant: "elevated",
+    url: "https://stackblitz.com/edit/storybook-vuetify-nuxt-q2hrhd?embed=1&file=README.md",
+  },
+  {
+    title: "Figma",
+    variant: "elevated",
+    url: "https://www.figma.com/file/5yTqz9lK0kVJy5I8Y7sFZv/Vuetify-Storybook-Starter-Kit?node-id=0%3A1",
+  },
+  {
+    title: "Cromatic",
+    variant: "elevated",
+    url: "https://www.chromatic.com/setup?appId=65440b50eff8b11b8e1d0939",
+  },
 ];
 
 const featuresDocs = [

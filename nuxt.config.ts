@@ -1,4 +1,4 @@
-import { Style } from "./.nuxt/components.d";
+// import { Style } from "./.nuxt/components.d";
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
