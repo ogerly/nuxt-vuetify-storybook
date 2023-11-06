@@ -155,9 +155,4 @@ You can find the Ocelot Storybook of this repository here: [https://65440b50eff8
 ```bash
   pnpm dlx http-server ./storybook-static
 ```
-
----
-
----
-
----
+ 
