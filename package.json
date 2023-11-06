@@ -6,7 +6,6 @@
     "build": "nuxt build",
     "dev": "pnpm run docsify --port 8080 & nuxt dev",
     "docsify": "docsify serve docs",
-    "docsify:convert": "node_modules/.bin/docsify-pdf-converter",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",

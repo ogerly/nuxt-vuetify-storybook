@@ -65,6 +65,7 @@ yarn preview
 For more information on deployment, please refer to the [Nuxt deployment documentation](https://nuxt.com/docs/getting-started/deployment).
 
 ---
+
 # Dokumentation
 
 We use **Docsify** in this project. This is available at http://localhost:8080.
