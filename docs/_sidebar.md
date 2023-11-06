@@ -17,4 +17,4 @@
 
 ---
 
-> @Ocelot::cool: + :free:
+> :cool: + :free:
