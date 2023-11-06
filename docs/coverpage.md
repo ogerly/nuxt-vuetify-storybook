@@ -10,4 +10,3 @@
 
 [Get Started](README.md)
 [GitHub](https://github.com/Ocelot-Social-Community/ocelot-future)
-
