@@ -72,7 +72,7 @@ For more information on deployment, please refer to the [Nuxt deployment documen
 
 Nuxt, Vuetify, Storybook, Figma, Cromatic
 
-Z# Zusammenspiel von Storybook, Figma und Chromatic
+## Zusammenspiel von Storybook, Figma und Chromatic
 
 Das Zusammenspiel von Storybook, Figma und Chromatic spielt eine entscheidende Rolle im professionellen Entwicklungsprozess und fördert die Zusammenarbeit zwischen Designern, Entwicklern und Kunden.
 
