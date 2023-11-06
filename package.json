@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "pnpm docs --port 8080 & nuxt dev",
+    "dev": "pnpm run docs --port 8080 & nuxt dev",
     "docs": "docsify serve docs",
     "docsify": "node middleware/docsify-server.js",
     "generate": "nuxt generate",

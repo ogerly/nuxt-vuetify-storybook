@@ -65,6 +65,12 @@ yarn preview
 For more information on deployment, please refer to the [Nuxt deployment documentation](https://nuxt.com/docs/getting-started/deployment).
 
 ---
+# Dokumentation
+
+We use **Docsify** in this project. This is available at http://localhost:8080.
+We ask you to read this in detail and go through all the steps before you start setting up Ocelot.
+Pay attention to the dependencies and the interaction of the individual tools and plugins.
+This project is also intended to be used for teaching and training purposes. We cover a large area of professional front-end development with this project.
 
 ---
 
@@ -72,7 +78,7 @@ For more information on deployment, please refer to the [Nuxt deployment documen
 
 Nuxt, Vuetify, Storybook, Figma, Cromatic
 
-Z# Interaction between Storybook, Figma and Chromatic
+### Interaction between Storybook, Figma and Chromatic
 
 The interaction between Storybook, Figma and Chromatic plays a decisive role in the professional development process and promotes collaboration between designers, developers and customers.
 
@@ -88,8 +94,8 @@ The interaction between Storybook, Figma and Chromatic plays a decisive role in 
 
 ## Chromatic
 
-- Purpose\*\*: Chromatic is a tool for visual regression and UI testing. It enables the continuous monitoring of UI changes and the early detection of visual problems.
-- Usage\*\*: Chromatic is used to ensure the visual consistency of UI components, especially in relation to design changes and updates. It captures screenshots of storybook components and compares them to detect visual regressions.
+- **Purpose**: Chromatic is a tool for visual regression and UI testing. It enables the continuous monitoring of UI changes and the early detection of visual problems.
+- **Use**: Chromatic is used to ensure the visual consistency of UI components, especially in relation to design changes and updates. It captures screenshots of storybook components and compares them to detect visual regressions.
 
   - The Ocelot Storybook of this repository can be found here: [https://65440b50eff8b11b8e1d0939-lpcuymgxzi.chromatic.com/](https://65440b50eff8b11b8e1d0939-lpcuymgxzi.chromatic.com/)
 
@@ -210,7 +216,7 @@ export default defineNuxtConfig({
 4. Start the development server with Vuetify:
 
 ```bash
-pnpm run dev
+  pnpm run dev
 ```
 
 ## Storybook Integration
