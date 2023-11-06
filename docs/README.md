@@ -146,6 +146,10 @@ You can connect your Storybook to Chromatic. To do this, you need an account wit
 
 You can publish your storybook to Chromatic with the following command:
 
+```bash
+  npx chromatic --project-token=chpt_YOUR_TOKEN
+```
+
 You can find the Ocelot Storybook of this repository here: [https://65440b50eff8b11b8e1d0939-lpcuymgxzi.chromatic.com/](https://65440b50eff8b11b8e1d0939-lpcuymgxzi.chromatic.com/)
 
 ## Storybook Static
@@ -155,4 +159,3 @@ You can find the Ocelot Storybook of this repository here: [https://65440b50eff8
 ```bash
   pnpm dlx http-server ./storybook-static
 ```
- 

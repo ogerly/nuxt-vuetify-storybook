@@ -13,11 +13,11 @@ const preview: Preview = {
     },
     darkMode: {
       // Override the default dark theme
-      dark: { ...themes.dark, brandImage: "blue-logo.svg" },
+      dark: { ...themes.dark, brandImage: "/public/storybook-logo-ocelot-150px.png" },
       // Override the default light theme
       light: {
         ...themes.normal,
-        brandImage: "black-logo.svg",
+        brandImage: "/public/storybook-logo-ocelot-150px.png",
       },
     },
   },

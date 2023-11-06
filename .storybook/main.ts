@@ -10,6 +10,7 @@ const config: StorybookConfig = {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     "@storybook/addon-designs",
+    "storybook-dark-mode",
   ],
   framework: {
     name: "@storybook-vue/nuxt",

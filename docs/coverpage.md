@@ -1,4 +1,4 @@
-# Ocelot - Dokumentation
+# Documantation
 
 > Social Network - [Ocelot](https://stage.ocelot.social/)
 
