@@ -25,11 +25,6 @@
         <v-btn variant="text" color="orange"> Go to Login </v-btn>
       </div>
     </v-sheet>
-    <v-parallax src="/ocelot-storybook.png" class="w-100" height="200">
-      <div class="text-h2">Ocelot</div>
-      <v-btn class="ma-2" color="secondary" dark to="/"> zurück </v-btn>
-    </v-parallax>
-    <v-img src="/ocelot-storybook.png" cover />
   </div>
 </template>
 <script setup>

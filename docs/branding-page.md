@@ -7,6 +7,6 @@
 
 ![](/ocelot.png)
 
-![](/public/ocelot-storybook.png)
-![](/public/docsify-logo-ocelot-150px.png)
-![](/public/ocelot-storybook.png)
+![](/ocelot-storybook.png)
+![](/docsify-logo-ocelot-150px.png)
+![](/ocelot-storybook.png)

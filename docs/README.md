@@ -1,5 +1,9 @@
 # Nuxt 3 Minimal Starter with Storybook and Vuetify
 
+> This project is currently under active development, and we anticipate numerous changes in the near future. Our primary objective is to establish a robust framework for professional front-end development, which can serve as a template for larger projects. Additionally, we aim to structure this project as a tutorial, with completion targeted for Q1/2024.
+
+![](/public/ocelot-storybook.png)
+
 The interplay of Nuxtjs, Vuetify, and Storybook now works quite well. However, it's not entirely straightforward, and the documentation on Nuxtjs is not always up to date. It took some time to achieve a clean integration, but with the modules provided by Nuxtjs, it is now possible to use Vuetify and Storybook together in a single project.
 
 Demo: [https://stackblitz.com/~/github.com/ogerly/nuxt-vuetify-storybook](https://stackblitz.com/~/github.com/ogerly/nuxt-vuetify-storybook)
@@ -68,10 +72,11 @@ For more information on deployment, please refer to the [Nuxt deployment documen
 
 # Dokumentation
 
-We use **Docsify** in this project. This is available at http://localhost:8080.
-We ask you to read this in detail and go through all the steps before you start setting up Ocelot.
-Pay attention to the dependencies and the interaction of the individual tools and plugins.
-This project is also intended to be used for teaching and training purposes. We cover a large area of professional front-end development with this project.
+We use Docsify in this project, which is available at http://localhost:4000. Before you start setting up Ocelot, please read this carefully and follow all the steps.
+
+Pay attention to the dependencies and the interaction of the individual tools and plugins. This project is also intended for teaching and training purposes, covering a wide range of professional front-end development.
+
+To run the documentation on http://localhost:4000, you can use the console command 'pnpm run docsify'.
 
 ---
 
@@ -79,7 +84,7 @@ This project is also intended to be used for teaching and training purposes. We 
 
 Nuxt, Vuetify, Storybook, Figma, Cromatic
 
-**Interaction between Storybook, Figma and Chromatic**
+### Interaction between Storybook, Figma and Chromatic
 
 The interaction between Storybook, Figma and Chromatic plays a decisive role in the professional development process and promotes collaboration between designers, developers and customers.
 
@@ -102,19 +107,19 @@ The interaction between Storybook, Figma and Chromatic plays a decisive role in 
 
   - The Ocelot Storybook Build at Cromatic of this repository can be found here: [https://www.chromatic.com/build?appId=65440b50eff8b11b8e1d0939](https://www.chromatic.com/build?appId=65440b50eff8b11b8e1d0939)
 
-# Interaction
+## Interaction
 
-1. ## Figma & Designer
+1. **Designer and Figma**:
 
    - Designers use Figma to create the visual design and create prototypes.
    - They share their design work with the development team and the customer via Figma.
 
-2. ## Storybook & Developers
+2. **Developers and Storybook**:
 
    - Developers use Storybook to implement and test the created components based on the Figma designs.
    - They create Storybook stories to showcase the functionality and appearance of the components.
 
-3. ## Chromatic & testing
+3. **chromatic and testing**:
 
    - Chromatic can be integrated into the development process to ensure that visual regressions are avoided.
    - Every time a change is made in Storybook, screenshots are automatically taken and compared to previous versions. Any visual deviation is recognised and logged.
@@ -125,13 +130,17 @@ The interaction between Storybook, Figma and Chromatic plays a decisive role in 
 
 The interaction of Storybook, Figma and Chromatic promotes seamless collaboration between designers and developers, enables efficient iteration and ensures that the UI components created meet the design specifications. This contributes to the quality and consistency of the end product and facilitates communication and approval with the customer.
 
-# Storybook
-
-## Port 6006
+### Storybook
 
 After starting the application, you can call up the storybook at [http://localhost:6006/](http://localhost:6006/).
 
-## Publish Storybook
+### Storybook to Chromatic
+
+You can connect your Storybook to Chromatic. To do this, you need an account with [Chromatic](https://www.chromatic.com/).
+
+You can publish your storybook to Chromatic with the following command:
+
+### Publish Storybook
 
 ```bash
   pnpm run build-storybook
@@ -140,22 +149,121 @@ After starting the application, you can call up the storybook at [http://localho
   npx chromatic --project-token=<your-project-token>
 ```
 
-## Storybook to Chromatic
-
-You can connect your Storybook to Chromatic. To do this, you need an account with [Chromatic](https://www.chromatic.com/).
-
-You can publish your storybook to Chromatic with the following command:
-
-```bash
-  npx chromatic --project-token=chpt_YOUR_TOKEN
-```
-
 You can find the Ocelot Storybook of this repository here: [https://65440b50eff8b11b8e1d0939-lpcuymgxzi.chromatic.com/](https://65440b50eff8b11b8e1d0939-lpcuymgxzi.chromatic.com/)
 
-## Storybook Static
-
-** If a Storybook build has been made, the Storybook can be accessed via this command at localhost:8080**
+### If a Storybook build has been made, the Storybook can be accessed via this command at localhost:8080
 
 ```bash
   pnpm dlx http-server ./storybook-static
+```
+
+---
+
+---
+
+---
+
+## Reconstructing the Starter:
+
+We have built the starter as follows.
+
+### The most crucial point is to use precise versions at the moment.
+
+- Nuxt: 3.6.5
+- Vuetify: 3.3.17
+- Storybook: 7.4.4
+
+## Installation Process
+
+1. Create a new Nuxt 3 project using the following command:
+
+```bash
+pnpm dlx nuxt@3.6.5 init <project-name>
+# Make sure you have 'shamefully-hoist=true' in your .npmrc before running pnpm install
+cd <project-name>
+pnpm install
+```
+
+2. Install Storybook and Vuetify:
+
+```bash
+npx storybook-nuxt init
+pnpm add @invictus.codes/nuxt-vuetify vuetify
+```
+
+3. Update your `nuxt.config.ts` with the following configuration:
+
+```typescript
+export default defineNuxtConfig({
+  devtools: { enabled: true },
+  modules: [
+    "@invictus.codes/nuxt-vuetify",
+    "@nuxtjs/storybook",
+    "@nuxtjs/eslint-module",
+  ],
+  vuetify: {
+    vuetifyOptions: {},
+    moduleOptions: {
+      treeshaking: false,
+      useIconCDN: true,
+      styles: "none",
+      autoImport: false,
+      useVuetifyLabs: true,
+    },
+  },
+  css: ["vuetify/styles"],
+  storybook: {
+    url: "http://localhost:6006",
+    storybookRoute: "/__storybook__",
+    port: 6006,
+  },
+});
+```
+
+4. Start the development server:
+
+```bash
+  pnpm run dev
+```
+
+## Storybook Integration
+
+To integrate Storybook with Nuxt 3, please refer to the [Storybook Nuxt module documentation](https://storybook.nuxtjs.org/).
+
+```
+Make sure you have the following versions for a smooth experience:
+- Nuxt: 3.6.5
+- Vuetify: 3.3.17
+- Storybook: 7.4.4
+```
+
+We are monitoring the development of the following modules:
+
+- @invictus.codes/nuxt-vuetify
+
+  - The module at Nuxtjs is: [https://nuxt.com/modules/nuxt-vuetify](https://nuxt.com/modules/nuxt-vuetify)
+
+- @nuxtjs/storybook
+
+  - [https://storybook.nuxtjs.org/getting-started/setup!!!](https://storybook.nuxtjs.org/getting-started/setup!!!)
+  - The module at Nuxtjs is: [https://nuxt.com/modules/storybook](https://nuxt.com/modules/storybook)
+
+  ```
+  ! Important Note !
+  - MDI ICON ! Es ist wichtig in der .storybook/preview.ts noch die alten mdi-icon Bibliothek einzubinden. (@mdi/font)
+  ```
+
+> .storybook/preview.ts
+>
+>      import 'vuetify/lib/styles/main.css'
+>      import '@mdi/font/scss/materialdesignicons.scss'
+
+- Use the installation instructions from [https://storybook.nuxtjs.org/getting-started/setup](https://storybook.nuxtjs.org/getting-started/setup). The instructions from the module page did not lead to the desired outcome.
+- Vite-plugin-vuetify can cause errors when building Storybook if exact versions are not followed. Remove vite-plugin-vuetify and follow the instructions.
+
+```
+
+To integrate Storybook with Nuxt 3, please refer to the [Storybook Nuxt module documentation](https://storybook.nuxtjs.org/).
+
+For a detailed tutorial on integrating Storybook with Vuetify in your Nuxt application, you can read this [Medium article](https://medium.com/@chakas3/tutorial-integrating-storybook-with-vuetify-in-your-nuxt-application-ac8af5a0a946).
 ```

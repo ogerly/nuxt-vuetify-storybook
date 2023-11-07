@@ -9,9 +9,9 @@ export default {
     src: {
       control: "select",
       options: [
-        "/public/ocelot-150px.png",
-        "/public/ocelot-storybook.png",
-        "/public/ocelot.png",
+        "/ocelot-150px.png",
+        "/ocelot-storybook.png",
+        "/ocelot.png",
         "https://picsum.photos/id/11/100/60",
       ],
     },

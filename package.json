@@ -4,8 +4,8 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "pnpm run docsify --port 8080 & nuxt dev",
-    "docsify": "docsify serve docs",
+    "dev": "nuxt dev",
+    "docsify": "docsify serve docs --port 4000",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
@@ -26,6 +26,7 @@
     "vuetify": "^3.3.17"
   },
   "devDependencies": {
+    "@mdi/font": "^7.3.67",
     "@nuxt/devtools": "^1.0.0",
     "@nuxt/types": "^2.17.2",
     "@nuxt/typescript-build": "^3.0.1",

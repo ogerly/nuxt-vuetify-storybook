@@ -23,7 +23,7 @@ export const Primary = {
     subtitle: "Custom Subtitle",
     text: "Custom Text",
     btnText: "Button",
-    image: "/public/ocelot-storybook.png",
+    image: "/ocelot-storybook.png",
   },
 };
 
@@ -35,6 +35,6 @@ export const LoadingCard = {
     subtitle: "Loading...",
     text: "Loading...",
     btnText: "Loading...",
-    image: "/public/ocelot-storybook.png",
+    image: "/ocelot-storybook.png",
   },
 };

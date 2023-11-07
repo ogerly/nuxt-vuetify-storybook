@@ -1,5 +1,9 @@
 # Nuxt 3 Minimal Starter with Storybook and Vuetify
 
+> This project is currently under active development, and we anticipate numerous changes in the near future. Our primary objective is to establish a robust framework for professional front-end development, which can serve as a template for larger projects. Additionally, we aim to structure this project as a tutorial, with completion targeted for Q1/2024.
+
+![](/public/ocelot-storybook.png)
+
 The interplay of Nuxtjs, Vuetify, and Storybook now works quite well. However, it's not entirely straightforward, and the documentation on Nuxtjs is not always up to date. It took some time to achieve a clean integration, but with the modules provided by Nuxtjs, it is now possible to use Vuetify and Storybook together in a single project.
 
 Demo: [https://stackblitz.com/~/github.com/ogerly/nuxt-vuetify-storybook](https://stackblitz.com/~/github.com/ogerly/nuxt-vuetify-storybook)
@@ -68,10 +72,11 @@ For more information on deployment, please refer to the [Nuxt deployment documen
 
 # Dokumentation
 
-We use **Docsify** in this project. This is available at http://localhost:8080.
-We ask you to read this in detail and go through all the steps before you start setting up Ocelot.
-Pay attention to the dependencies and the interaction of the individual tools and plugins.
-This project is also intended to be used for teaching and training purposes. We cover a large area of professional front-end development with this project.
+We use Docsify in this project, which is available at http://localhost:4000. Before you start setting up Ocelot, please read this carefully and follow all the steps.
+
+Pay attention to the dependencies and the interaction of the individual tools and plugins. This project is also intended for teaching and training purposes, covering a wide range of professional front-end development.
+
+To run the documentation on http://localhost:4000, you can use the console command 'pnpm run docsify'.
 
 ---
 
@@ -206,6 +211,7 @@ export default defineNuxtConfig({
       useVuetifyLabs: true,
     },
   },
+  css: ["vuetify/styles"],
   storybook: {
     url: "http://localhost:6006",
     storybookRoute: "/__storybook__",
@@ -214,7 +220,7 @@ export default defineNuxtConfig({
 });
 ```
 
-4. Start the development server with Vuetify:
+4. Start the development server:
 
 ```bash
   pnpm run dev
@@ -243,11 +249,21 @@ We are monitoring the development of the following modules:
   - The module at Nuxtjs is: [https://nuxt.com/modules/storybook](https://nuxt.com/modules/storybook)
 
   ```
-  /* ! Important Note !
-  - Use the installation instructions from [https://storybook.nuxtjs.org/getting-started/setup](https://storybook.nuxtjs.org/getting-started/setup). The instructions from the module page did not lead to the desired outcome.
-  - Vite-plugin-vuetify can cause errors when building Storybook if exact versions are not followed. Remove vite-plugin-vuetify and follow the instructions.
+  ! Important Note !
+  - MDI ICON ! Es ist wichtig in der .storybook/preview.ts noch die alten mdi-icon Bibliothek einzubinden. (@mdi/font)
   ```
 
-  To integrate Storybook with Nuxt 3, please refer to the [Storybook Nuxt module documentation](https://storybook.nuxtjs.org/).
+> .storybook/preview.ts
+>
+>      import 'vuetify/lib/styles/main.css'
+>      import '@mdi/font/scss/materialdesignicons.scss'
 
-  For a detailed tutorial on integrating Storybook with Vuetify in your Nuxt application, you can read this [Medium article](https://medium.com/@chakas3/tutorial-integrating-storybook-with-vuetify-in-your-nuxt-application-ac8af5a0a946).
+- Use the installation instructions from [https://storybook.nuxtjs.org/getting-started/setup](https://storybook.nuxtjs.org/getting-started/setup). The instructions from the module page did not lead to the desired outcome.
+- Vite-plugin-vuetify can cause errors when building Storybook if exact versions are not followed. Remove vite-plugin-vuetify and follow the instructions.
+
+```
+
+To integrate Storybook with Nuxt 3, please refer to the [Storybook Nuxt module documentation](https://storybook.nuxtjs.org/).
+
+For a detailed tutorial on integrating Storybook with Vuetify in your Nuxt application, you can read this [Medium article](https://medium.com/@chakas3/tutorial-integrating-storybook-with-vuetify-in-your-nuxt-application-ac8af5a0a946).
+```

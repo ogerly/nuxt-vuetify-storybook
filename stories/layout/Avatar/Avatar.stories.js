@@ -25,7 +25,7 @@ export default {
     },
     image: {
       control: "select",
-      options: ["/public/ocelot-150px.png"],
+      options: ["/ocelot-150px.png"],
     },
   },
 };
@@ -36,7 +36,7 @@ export const Image = {
   args: {
     size: "x-large",
     variant: "outlined",
-    image: "/public/ocelot-150px.png",
+    image: "/ocelot-150px.png",
   },
 };
 export const Icon = {

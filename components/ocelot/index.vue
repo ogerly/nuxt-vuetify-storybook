@@ -65,6 +65,8 @@
       />
     </v-card>
   </div>
+  <v-divider />
+  <vuetify />
 </template>
 <script setup>
 const featuresFrontend = [

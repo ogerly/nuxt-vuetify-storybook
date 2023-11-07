@@ -17,9 +17,9 @@ export default defineNuxtConfig({
       useVuetifyLabs: true,
     },
   },
-  // build: {
-  //   transpile: ["vuetify"],
-  // },
+  build: {
+    transpile: ["vuetify"],
+  },
   typescript: {
     shim: false,
   },
