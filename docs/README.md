@@ -2,7 +2,7 @@
 
 > This project is currently under active development, and we anticipate numerous changes in the near future. Our primary objective is to establish a robust framework for professional front-end development, which can serve as a template for larger projects. Additionally, we aim to structure this project as a tutorial, with completion targeted for Q1/2024.
 
-![](/public/ocelot-storybook.png)
+![](ocelot-storybook.png)
 
 The interplay of Nuxtjs, Vuetify, and Storybook now works quite well. However, it's not entirely straightforward, and the documentation on Nuxtjs is not always up to date. It took some time to achieve a clean integration, but with the modules provided by Nuxtjs, it is now possible to use Vuetify and Storybook together in a single project.
 
