@@ -58,7 +58,7 @@
     <v-card height="700" width="95%">
       <iframe
         key="storybook-vuetify-nuxt-q2hrhd"
-        src="https://stackblitz.com/edit/storybook-vuetify-nuxt-q2hrhd?embed=1&file=README.md"
+        src="https://stackblitz.com/~/github.com/ogerly/nuxt-vuetify-storybook"
         frameborder="0"
         width="100%"
         height="100%"

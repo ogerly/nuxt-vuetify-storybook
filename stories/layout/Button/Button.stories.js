@@ -60,6 +60,12 @@ export const Normal = {
   args: {
     text: "Ocelot",
   },
+  parameters: {
+    designe: {
+      type: "figma",
+      url: "https://www.figma.com/file/xHL3nOXzTZQtZkmkOV5PT4/Official-Vuetify-3-Figma-Library-(Community)?type=design&node-id=175-7&mode=dev",
+    },
+  },
 };
 
 export const Icon = {

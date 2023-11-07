@@ -1,5 +1,11 @@
 # Nuxt 3 Minimal Starter with Storybook and Vuetify
 
+![Storybook](https://img.shields.io/badge/Nuxt.js-00DC82.svg?style=for-the-badge&logo=nuxtdotjs&logoColor=white)
+![Storybook](https://img.shields.io/badge/Vuetify-1867C0.svg?style=for-the-badge&logo=Vuetify&logoColor=white)
+![License](https://img.shields.io/badge/Storybook-FF4785.svg?style=for-the-badge&logo=Storybook&logoColor=white)
+![License](https://img.shields.io/badge/Figma-F24E1E.svg?style=for-the-badge&logo=Figma&logoColor=white)
+![License](https://img.shields.io/badge/Docsify-2ECE53.svg?style=for-the-badge&logo=Docsify&logoColor=white)
+
 > This project is currently under active development, and we anticipate numerous changes in the near future. Our primary objective is to establish a robust framework for professional front-end development, which can serve as a template for larger projects. Additionally, we aim to structure this project as a tutorial, with completion targeted for Q1/2024.
 
 ![](/public/ocelot-storybook.png)
