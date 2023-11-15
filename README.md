@@ -109,7 +109,7 @@ The interaction between Storybook, Figma and Chromatic plays a decisive role in 
 - **Purpose**: Chromatic is a tool for visual regression and UI testing. It enables the continuous monitoring of UI changes and the early detection of visual problems.
 - **Use**: Chromatic is used to ensure the visual consistency of UI components, especially in relation to design changes and updates. It captures screenshots of storybook components and compares them to detect visual regressions.
 
-  - The Ocelot Storybook of this repository can be found here: [https://65440b50eff8b11b8e1d0939-lpcuymgxzi.chromatic.com/](https://65440b50eff8b11b8e1d0939-lpcuymgxzi.chromatic.com/)
+  - The Ocelot Storybook of this repository can be found here: [https://www.chromatic.com/library?appId=65440b50eff8b11b8e1d0939&branch=master](https://www.chromatic.com/library?appId=65440b50eff8b11b8e1d0939&branch=master)
 
   - The Ocelot Storybook Build at Cromatic of this repository can be found here: [https://www.chromatic.com/build?appId=65440b50eff8b11b8e1d0939](https://www.chromatic.com/build?appId=65440b50eff8b11b8e1d0939)
 
@@ -146,7 +146,7 @@ You can connect your Storybook to Chromatic. To do this, you need an account wit
 
 You can publish your storybook to Chromatic with the following command:
 
-### Publish Storybook
+### Publish Storybook to Cromatic
 
 ```bash
   pnpm run build-storybook
@@ -164,6 +164,13 @@ You can find the Ocelot Storybook of this repository here: [https://65440b50eff8
 ```
 
 ---
+
+# Tutorials
+
+- [Figma (german)](https://www.youtube.com/playlist?list=PLgZriansjqQ5JkWX0X0rO8Clm5_3mKQ4M)
+- [Figma Prototyping Tutorial (german)](https://youtu.be/THZ4DfyGsgM)
+- [Figma Tutorial für Anfänger (2023) (german)](https://youtu.be/YtLbCASJAL0)
+- [How to Integrate Figma Design Systems with Storybook](https://youtu.be/O3afqyCS2-o)
 
 ---
 

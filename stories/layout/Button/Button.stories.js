@@ -53,6 +53,12 @@ export default {
       control: "boolean",
     },
   },
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/E4IYw9KnylXIfPE3SHlmKE/Vuetify-(Material-Design-Component-Figma-Library-For-Vue.js)-(Community)?node-id=14%3A728&mode=dev",
+    },
+  },
 };
 
 // More on writing stories with args: https://storybook.js.org/docs/vue/writing-stories/args
@@ -61,7 +67,7 @@ export const Normal = {
     text: "Ocelot",
   },
   parameters: {
-    designe: {
+    design: {
       type: "figma",
       url: "https://www.figma.com/file/xHL3nOXzTZQtZkmkOV5PT4/Official-Vuetify-3-Figma-Library-(Community)?type=design&node-id=175-7&mode=dev",
     },
@@ -71,6 +77,12 @@ export const Normal = {
 export const Icon = {
   args: {
     icon: "$vuetify",
+  },
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/xHL3nOXzTZQtZkmkOV5PT4/Official-Vuetify-3-Figma-Library-(Community)?type=design&node-id=178-149&mode=dev",
+    },
   },
 };
 

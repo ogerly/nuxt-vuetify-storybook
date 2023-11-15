@@ -15,12 +15,11 @@
     "lintfix": "prettier --write --list-different . && pnpm lint:js --fix",
     "storybook": "storybook dev --port 6006",
     "build-storybook": "storybook build",
+    "static-storybook": "pnpm dlx http-server ./storybook-static",
     "chromatic": "chromatic"
   },
   "dependencies": {
     "@invictus.codes/nuxt-vuetify": "^0.3.0",
-    "docsify-cli": "^4.4.4",
-    "express": "^4.18.2",
     "nuxt": "3.6.5",
     "vue": "^3.3.7",
     "vuetify": "^3.3.17"
@@ -45,7 +44,6 @@
     "@types/node": "^20.8.10",
     "chromatic": "^7.6.0",
     "docsify": "^4.13.1",
-    "docsify-pdf-converter": "^2.0.7",
     "eslint": "^8.52.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-nuxt": "^4.0.0",
