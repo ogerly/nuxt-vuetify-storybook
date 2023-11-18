@@ -19,14 +19,14 @@
     "chromatic": "chromatic"
   },
   "dependencies": {
-    "@invictus.codes/nuxt-vuetify": "^0.3.0",
-    "nuxt": "3.6.5",
-    "vue": "^3.3.7",
-    "vuetify": "^3.3.17"
+    "nuxt": "^3.8.1",
+    "vue": "^3.3.8",
+    "vuetify": "^3.4.2"
   },
   "devDependencies": {
+    "vuetify-nuxt-module": "^0.6.7",
     "@mdi/font": "^7.3.67",
-    "@nuxt/devtools": "^1.0.0",
+    "@nuxt/devtools": "^1.0.2",
     "@nuxt/types": "^2.17.2",
     "@nuxt/typescript-build": "^3.0.1",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",

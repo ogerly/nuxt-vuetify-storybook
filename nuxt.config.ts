@@ -2,19 +2,20 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
-    "@invictus.codes/nuxt-vuetify",
     "nuxt-mdi",
     "@nuxtjs/storybook",
     "@nuxtjs/eslint-module",
+    "vuetify-nuxt-module",
   ],
   vuetify: {
     vuetifyOptions: {},
     moduleOptions: {
-      treeshaking: false,
-      useIconCDN: true,
-      styles: "none",
-      autoImport: false,
-      useVuetifyLabs: true,
+      // treeShake: true,
+      // treeshaking: true,
+      //   useIconCDN: true,
+      //   styles: "none",
+      //   autoImport: false,
+      //   useVuetifyLabs: true,
     },
   },
   build: {
